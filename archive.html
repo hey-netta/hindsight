@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<title>Hindsight</title>
 	<meta name="description" content="Creative advice to our younger selves">
-	<meta name="author" content="Netta Marshall">
+	<meta name="author" content="Netta Selene">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -34,7 +34,7 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="icon" href="http://www.nettamarshall.com/favicon.ico" />	
+	<link rel="icon" href="favicon.ico"/>
 	<!-- Type
 	================================================== -->
 
@@ -50,7 +50,7 @@
 		<div id="column-solo">
 			<div id="nav">
 				<div id="desc">
-					<a href="/"><img src="i/logo@2x.png" width="172" height="38"></a>
+					<a href="./"><img src="i/logo@2x.png" width="172" height="38"></a>
 				</div>
 				<div class="links">
 					<ul>
@@ -74,7 +74,7 @@
 		for (var i = 0; i < window.nm.authors.length; i++) {
 			var authorEl = document.createElement('a');
 			authorEl.appendChild(document.createTextNode(window.nm.quotes[window.nm.authors[i]].name));
-			authorEl.href = '/' + window.nm.authors[i];
+			authorEl.href = window.nm.authorUrl(window.nm.authors[i]);
 			var authorListEl = document.createElement('li');
 			authorListEl.appendChild(authorEl);
 			archiveListEl.appendChild(authorListEl);

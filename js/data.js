@@ -869,4 +869,25 @@
 			]
 		},
 	};
+
+	window.nm.route = function() {
+		var match = window.location.search.match(/[?&]person=([^&]+)/);
+		var author = '';
+
+		if (match) {
+			author = decodeURIComponent(match[1].replace(/\+/g, ' '));
+		}
+
+		if (!window.nm.quotes[author]) {
+			author = '';
+		}
+
+		return {
+			author: author
+		};
+	};
+
+	window.nm.authorUrl = function(authorName) {
+		return 'index.html?person=' + encodeURIComponent(authorName);
+	};
 //})();
